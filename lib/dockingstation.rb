@@ -9,10 +9,12 @@ class DockingStation
   end
 
   def release_bike
-    if @bike = nil
-      raise "Sorry, no bikes"
+    if @bike
+      @bike = nil
+    puts "foo"
     else
-      Bike.new
+      raise "Sorry, no bikes"
+      puts "bar"
     end
   end
 end
