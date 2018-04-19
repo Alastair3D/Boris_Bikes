@@ -6,16 +6,18 @@ class DockingStation
   # end
 
   def dock_bike(bike)
-    bike = @bike 
+    if @bike == nil
+      @bike = bike
+    else
+      fail "Sorry, this docking station is full"
+    end
   end
 
   def release_bike
     if @bike
       @bike = nil
-    puts "foo"
     else
       raise "Sorry, no bikes"
-      puts "bar"
     end
   end
 end
