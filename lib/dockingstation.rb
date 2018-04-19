@@ -1,21 +1,21 @@
 class DockingStation
-  attr_reader :bike
+  attr_reader :bikes
 
-  # # def initialize
-  #   @bike = bike
-  # end
+ def initialize
+    @bikes = []
+  end
 
   def dock_bike(bike)
-    if @bike == nil
-      @bike = bike
+    if @bikes == nil
+      @bikes = bike
     else
       fail "Sorry, this docking station is full"
     end
   end
 
   def release_bike
-    if @bike
-      @bike = nil
+    if @bikes
+      @bikes = nil
     else
       raise "Sorry, no bikes"
     end
