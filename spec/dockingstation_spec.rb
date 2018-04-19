@@ -11,6 +11,7 @@ describe DockingStation do
   end
 
   it 'Does not allow bike to be docked when docking station is full' do
-    expect { subject.dock_bike }.to raise error
+    expect { subject.dock_bike }.to raise_error
   end
+
 end
